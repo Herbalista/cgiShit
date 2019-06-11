@@ -2,14 +2,17 @@
 import cgi
 
 print "Content-type: text/html"
-print
 print """
 <html>
 <title>Calculator</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="mystylesheet.css" type="text/css">
+<style>
+body{
+	background-color: #05ffb0;
+}
+</style>
 <body>
-
 <div class="container">
   <h1>Arbitage betting calculator</h1>
 </div>
@@ -39,11 +42,11 @@ form = cgi.FieldStorage()
 
 # Using HTML input and forms method 
 print("<form method='GET' action='betting2.py'>") 
-print("<p>Bookmaker1 Outcome1: <input type='text' name='b1o1' /></p>") 
-print("<p>Bookmaker1 Outcome2: <input type='text' name='b1o2' /></p>") 
-print("<p>Bookmaker2 Outcome1: <input type='text' name='b2o1' /></p>") 
-print("<p>Bookmaker2 Outcome2: <input type='text' name='b2o2' /></p>") 
-print("<p>Stake: <input type='text' name='stake' /></p>") 
+print("<p>Bookmaker1 Outcome1: <input type='number' step='0.01' name='b1o1' /></p>") 
+print("<p>Bookmaker1 Outcome2: <input type='number' step='0.01' name='b1o2' /></p>") 
+print("<p>Bookmaker2 Outcome1: <input type='number' step='0.01' name='b2o1' /></p>") 
+print("<p>Bookmaker2 Outcome2: <input type='number' step='0.01' name='b2o2' /></p>") 
+print("<p>Stake: <input type='number' step='0.01' name='stake' /></p>") 
 print("<input type='submit' value='Submit' />") 
 print("</form") 
 print("</body></html>") 
